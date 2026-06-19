@@ -2240,3 +2240,104 @@ const BAKED_PRICE={"2026-06-01":[[1780264800,30424.0],[1780264860,30402.0],[1780
 </script>
 </body>
 </html>
+/* ==========================
+   iPhone / Mobile Layout
+   ========================== */
+
+@media (max-width: 768px){
+
+    html,
+    body{
+        overflow:auto;
+        height:auto;
+    }
+
+    .wrap{
+        height:auto;
+        min-height:100vh;
+    }
+
+    .tabbar{
+        flex-wrap:wrap;
+        gap:8px;
+        padding:8px;
+    }
+
+    .tabbar .gctrls{
+        width:100%;
+        margin-left:0;
+        justify-content:space-between;
+        flex-wrap:wrap;
+    }
+
+    .tabsec{
+        padding:8px;
+    }
+
+    header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .hdr-right{
+        width:100%;
+        flex-wrap:wrap;
+        gap:6px;
+    }
+
+    .slot,
+    .stat{
+        width:100%;
+    }
+
+    .brand .inf{
+        font-size:18px;
+    }
+
+    .brand .name{
+        font-size:13px;
+        letter-spacing:.18em;
+    }
+
+    .chartwrap,
+    .polar-panel{
+        min-height:420px;
+        height:65vh;
+    }
+
+    canvas{
+        touch-action:manipulation;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .legend{
+        max-width:100%;
+    }
+
+    .breaches{
+        width:100%;
+    }
+
+    .modeToggle{
+        transform:scale(.9);
+        transform-origin:top left;
+    }
+
+    .chart-tools{
+        transform:scale(.9);
+        transform-origin:top right;
+    }
+
+    .pzoom{
+        right:8px;
+    }
+
+    .pdpanel{
+        width:100vw;
+        max-width:100vw;
+    }
+}
