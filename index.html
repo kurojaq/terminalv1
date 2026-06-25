@@ -755,7 +755,7 @@ const BAKED_PRICE={};  /* demo price dataset removed — back dates now show onl
     overlay.width=Math.round(w*dpr); overlay.height=Math.round(h*dpr); octx.setTransform(dpr,0,0,dpr,0,0);
     if(keep && keep.width===overlay.width){ octx.save(); octx.setTransform(1,0,0,1,0,0); octx.putImageData(keep,0,0); octx.restore(); }
     draw(); __initBlank=false; try{ if(window.__breachRefresh) requestAnimationFrame(function(){ try{ window.__breachRefresh(); }catch(_e){} }); }catch(_b){} }
-  window.__breachData=function(){ return {rowsA:(A&&A.rows)||[], rowsB:(B&&B.rows)||[], inst:aInst, date:date}; };
+  window.__breachData=function(){ var rA=(__rowsFor(aInst,date))||((A&&A.rows)||[]); var rB=(__rowsFor(ZN,date))||((B&&B.rows)||[]); return {rowsA:rA, rowsB:rB, inst:aInst, date:date}; };
   new ResizeObserver(sizeCanvas).observe(canvas);
   window.__detResize=sizeCanvas;
 
@@ -3002,4 +3002,3 @@ button.go:hover{filter:brightness(1.07)} button.go:disabled{opacity:.5;cursor:de
 })();
 </script>
 </body>
-</html>
